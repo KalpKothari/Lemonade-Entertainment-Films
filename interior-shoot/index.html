@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interior Shoot</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="/home-imgs/logo.jpg" alt="Logo" class="logo" />
+    <span class="brand-name">Lemonade Entertainment Films</span>
+  </div>
+  <div class="navbar-right">
+    <a href="/index.html" class="nav-link">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Our Facilities<span class="arrow">▼</span> </button>
+        <div class="dropdown-content">
+          <a href="/wedding-films/index.html">Wedding Film</a>
+          <a href="/pre-wedding/index.html">Pre-Wedding Shoot</a>
+          <a href="/product-shoot/index.html">Product Shoot</a>
+          <a href="/event-coverage/index.html">Event Coverage</a>
+        </div>
+      </div>
+    </div>      
+</nav>
+
+  <div class="hero-section">
+    <h1>Architectural Cinematography</h1>
+    <p>Explore our finest work across beautiful home interiors and premium corporate spaces.</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-type="all">Samples</button>
+    <button class="filter-btn" data-type="home">Home Interiors</button>
+    <button class="filter-btn" data-type="corporate">Corporate Spaces</button>
+  </div>
+
+  <p class="more-shoots-note">Start with a glimpse — filter through to explore the full story that inspires you</p>
+
+  <div class="gallery-container">
+    <!-- SAMPLE IMAGES -->
+    <div class="gallery-card initial" data-type="home">
+        <img src="images/home1.JPG" alt="Home Interior 1" />
+      </div>
+      <div class="gallery-card initial" data-type="corporate">
+        <img src="images/office7.jpg" alt="Corporate Space 7" />
+      </div>
+      <div class="gallery-card initial" data-type="home">
+        <img src="images/home5.JPG" alt="Home Interior 5" />
+      </div>
+      <div class="gallery-card initial" data-type="corporate">
+        <img src="images/office1.jpg" alt="Corporate Space 2" />
+      </div>
+      <!-- Remaining ones -->
+      <div class="gallery-card" data-type="home">
+        <img src="images/home2a.JPG" alt="Home Interior 2" />
+      </div>
+      <div class="gallery-card" data-type="home">
+        <img src="images/home3.JPG" alt="Home Interior 3" />
+      </div>
+      <div class="gallery-card" data-type="home">
+        <img src="images/home4.JPG" alt="Home Interior 4" />
+      </div>
+      <div class="gallery-card" data-type="home">
+        <img src="images/home6.JPG" alt="Home Interior 6" />
+      </div>
+      <div class="gallery-card" data-type="home">
+        <img src="images/home7.JPG" alt="Home Interior 7" />
+      </div>
+      <div class="gallery-card" data-type="corporate">
+        <img src="images/office2.JPG" alt="Corporate Space 2" />
+      </div>
+      <div class="gallery-card" data-type="corporate">
+        <img src="images/office3.jpg" alt="Corporate Space 3" />
+      </div> 
+      <div class="gallery-card" data-type="corporate">
+        <img src="images/office4.jpg" alt="Corporate Space 4" />
+      </div> 
+      <div class="gallery-card" data-type="corporate">
+        <img src="images/office5.jpg" alt="Corporate Space 5" />
+      </div> 
+      <div class="gallery-card" data-type="corporate">
+        <img src="images/office6.jpg" alt="Corporate Space 6" />
+      </div>    
+    <!-- ADD more images as needed -->
+  </div>
+
+  <div class="cta-section">
+    <h2>Want to explore our corporate film?</h2>
+    <button class="view-video-btn" onclick="openPopup()">Watch Now</button>
+  </div>
+
+  <!-- Popup Video Modal -->
+  <div id="videoPopup" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <video id="corporateVideo" controls>
+        <source src="video/corporate-film.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>  
+</body>
+</html>
