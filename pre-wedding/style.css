@@ -1,0 +1,305 @@
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-right a,
+.dropbtn {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar-right a:hover,
+.dropbtn:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* subtle transparent white hover */
+  border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.arrow {
+  font-size: 12px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg); /* flip on hover for nice effect */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.1); /* transparent background */
+  backdrop-filter: blur(6px); /* frosted glass effect */
+  min-width: 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255, 255, 255, 0.15); /* Soft frosted glass effect */
+  backdrop-filter: blur(4px);
+  color: #ffd700; /* Optional: golden text on hover */
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #0d0d0d;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ffcc00;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffcc00;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  .main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0 20px;
+    color: #ffeaa7;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 40px 80px;
+    overflow: visible;
+  }
+  
+  .spotify-card {
+    background-color: white;
+    color: black;
+    width: 300px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .spotify-card:hover {
+    transform: scale(1.04) translateY(-10px) !important;
+  }
+  
+  
+  .spotify-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  
+  .card-info {
+    padding: 18px;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .card-info h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .card-info p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .song-controls {
+    padding: 0 18px 10px;
+    background: #fff;
+    font-size: 14px;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .top-bar i {
+    color: #ff5e78;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  
+  .progress-bar .progress {
+    height: 100%;
+    background: #ff5e78;
+    border-radius: 3px;
+    width: 40%;
+    transition: width 0.3s ease;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .controls i {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .controls i:hover {
+    color: #ff5e78;
+  }
+  
+  .main-play {
+    font-size: 30px;
+    color: #ff5e78;
+  }
+  
+  
+  .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(#ff6b81 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.06;
+    animation: moveBg 60s linear infinite;
+    z-index: -1;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  
+  @keyframes moveBg {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100px 100px;
+    }
+  }
+  
+    .spotify-card {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+  
+    .spotify-card:nth-child(even) {
+      transform: translateX(-40px);
+    }
+  
+    .spotify-card:nth-child(odd) {
+      transform: translateX(40px);
+    }
+  
+    .spotify-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+  
