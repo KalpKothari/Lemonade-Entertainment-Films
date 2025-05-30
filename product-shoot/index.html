@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Shoot - Our Facilities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="/home-imgs/logo.jpg" alt="Logo" class="logo" />
+    <span class="brand-name">Lemonade Entertainment Films</span>
+  </div>
+  <div class="navbar-right">
+    <a href="/index.html" class="nav-link">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Our Facilities<span class="arrow">▼</span> </button>
+        <div class="dropdown-content">
+          <a href="/wedding-films/index.html">Wedding Film</a>
+          <a href="/pre-wedding/index.html">Pre-Wedding Shoot</a>
+          <a href="/interior-shoot/index.html">Interior Shoot</a>
+          <a href="/event-coverage/index.html">Event Coverage</a>
+        </div>
+      </div>
+    </div>      
+</nav>
+
+  <header class="page-header">
+    <h1>Explore Our Product Shoots</h1>
+    <p>Capturing perfection across a range of premium products</p>
+  </header>
+
+  <section class="product-grid">
+    <div class="product-card" onclick="openPopup(this)" data-images="images/oil/oil1.JPG,images/oil/oil2.JPG,images/oil/oil3.JPG,images/oil/oil4.JPG,images/oil/oil5.JPG,images/oil/oil6.JPG,images/oil/oil7.JPG">
+      <img src="images/oil/oiltn.JPG" alt="Oils">
+      <h3>Oils</h3>
+    </div>
+    <div class="product-card" onclick="openPopup(this)" data-images="images/jewellery/jew1.jpg,images/jewellery/jew2.JPG,images/jewellery/jew3.jpg,images/jewellery/jew4.jpg,images/jewellery/jew5.jpg,images/jewellery/jew6.JPG,images/jewellery/jew7.JPG">
+      <img src="images/jewellery/jewtn.JPG" alt="Jewellery">
+      <h3>Jewellery</h3>
+    </div>
+    <div class="product-card" onclick="openPopup(this)" data-images="images/food/food1.JPG,images/food/food2.JPG,images/food/food3.JPG,images/food/food4.jpg,images/food/food5.JPG,images/food/food6.JPG">
+      <img src="images/food/foodtn.jpg" alt="Food">
+      <h3>Food</h3>
+    </div>
+    <div class="product-card" onclick="openPopup(this)" data-images="images/bwp/bwp1.png,images/bwp/bwp2.jpg,images/bwp/bwp3.jpg,images/bwp/bwp4.jpg,images/bwp/bwp5.jpg,images/bwp/bwp6.png">
+      <img src="images/bwp/bwptn.jpg" alt="Style Essentials" style="width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;">
+      <h3>Style Essentials</h3>
+    </div>
+  </section>
+
+  <!-- Image Popup Viewer -->
+  <div id="popupOverlay" class="popup-overlay">
+    <div class="popup-box">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <img id="popupImage" src="" alt="Popup Image">
+      <div class="nav-btns">
+        <button onclick="prevImage()">&#10094;</button>
+        <button onclick="nextImage()">&#10095;</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
