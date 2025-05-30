@@ -1,0 +1,231 @@
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-right a,
+.dropbtn {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar-right a:hover,
+.dropbtn:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* subtle transparent white hover */
+  border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.arrow {
+  font-size: 12px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg); /* flip on hover for nice effect */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.1); /* transparent background */
+  backdrop-filter: blur(6px); /* frosted glass effect */
+  min-width: 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255, 255, 255, 0.15); /* Soft frosted glass effect */
+  backdrop-filter: blur(4px);
+  color: #ffd700; /* Optional: golden text on hover */
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #0d0d0d;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ffcc00;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffcc00;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+    overflow-x: hidden;
+  }
+  
+  .main-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 30px 20px;
+    color: #ff4d6d;
+    text-shadow: 2px 2px 4px #ffa6c1;
+  }
+  
+  .string-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding: 30px 0;
+  }
+  
+  .string {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .string::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background: #d6336c;
+    background-image: linear-gradient(to right, #ff6f91, #ffc0cb);
+    transform: rotate(-2deg);
+  }
+  
+  .string:nth-child(even)::before {
+    transform: rotate(2deg);
+  }
+  
+  .photo {
+    position: relative;
+    top: 10px;
+    animation: sway 3s ease-in-out infinite;
+  }
+  
+  .photo img {
+    width: 160px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .photo::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: #555;
+    transform: translateX(-50%);
+  }
+  
+  .photo img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Sway animation */
+  @keyframes sway {
+    0% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+    100% { transform: rotate(-2deg); }
+  }
+  
+  /* Bounce in on scroll (JS adds .in-view) */
+  .photo.in-view {
+    animation: bounceIn 0.7s ease;
+  }
+  
+  @keyframes bounceIn {
+    0%   { transform: scale(0.9) rotate(0deg); opacity: 0; }
+    60%  { transform: scale(1.1) rotate(2deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+  
